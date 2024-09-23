@@ -143,7 +143,7 @@ def generate_audio(conversation):
     merge_audios(audio_folder, output_file)
 
 # Read the article from the file
-with open('ranking.txt', 'r') as file:
+with open('content.txt', 'r') as file:
     article = file.read()
 
 # Generate conversation and audio
