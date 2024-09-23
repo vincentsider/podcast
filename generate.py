@@ -8,6 +8,8 @@ from google.cloud import texttospeech
 from pydub import AudioSegment
 from vertexai.generative_models import GenerativeModel, GenerationConfig
 
+elevenlabs_api_key = os.getenv("ELEVENLABS_API_KEY")
+
 # Google TTS Client
 client = texttospeech.TextToSpeechClient()
 
@@ -37,7 +39,7 @@ elevenlabs_url = "https://api.elevenlabs.io/v1/text-to-speech/ERL3svWBAQ18ByCZTr
 elevenlabs_headers = {
     "Accept": "audio/mpeg",
     "Content-Type": "application/json",
-    "xi-api-key": "your_api_key"  # Replace with your actual API key
+    "xi-api-key": elevenlabs_api_key  # Replace with your actual API key
 }
 
 
